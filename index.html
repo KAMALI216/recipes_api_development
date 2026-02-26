@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🍽 Recipe Manager</h1>
+
+<!-- 🔹 Add Recipe Form -->
+<section class="form-section">
+    <h2>Add Recipe</h2>
+    <form id="recipeForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="cuisine" placeholder="Cuisine" required>
+        <input type="number" step="0.1" id="rating" placeholder="Rating">
+        <input type="number" id="prepTime" placeholder="Prep Time">
+        <input type="number" id="cookTime" placeholder="Cook Time">
+        <input type="number" id="totalTime" placeholder="Total Time">
+        <input type="text" id="serves" placeholder="Serves">
+        <textarea id="description" placeholder="Description"></textarea>
+        <textarea id="nutrients" placeholder='Nutrients (JSON format)'></textarea>
+
+        <button type="submit">Add Recipe</button>
+    </form>
+</section>
+
+<!-- 🔹 View Top Recipes -->
+<section>
+    <h2>Top Recipes</h2>
+    <button onclick="loadTopRecipes()">Load Top Recipes</button>
+    <div id="recipesContainer" class="recipes"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
